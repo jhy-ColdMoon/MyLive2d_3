@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Live2D 看板娘 v1.2 / Demo</title>
+    <link rel="stylesheet" type="text/css" href="./live2d/assets/waifu.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h2>从开发模式分离出来的，能够直接运行，显示看板娘</h2>
+    <h2>可切换看板娘，仅限模型中存在的</h2>
+    <h2>运行需要以服务器方式运行</h2>
+    <h2>但只有模型，模型旁边的小工具功能有些没有实现</h2>
+    <div class="waifu">
+      <div class="waifu-tips"></div>
+      <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+      <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+      </div>
+    </div>
+    <!-- Live2DCubismCore script -->
+    <script src="./Core/live2dcubismcore.js"></script>
+    <!-- Build script -->
+    <script src="./dist/meidou_live2d.js"></script>
+    <script src="./live2d/assets/waifu-tips.js"></script>
+    <script type="text/javascript">
+      //必选参数
+      //let remoteurl = "http://127.0.0.1:5501/"
+      let modulesPath = "./live2d/models/";
+      //modulesPath =remoteurl
+      let modelNames = ["Hiyori", "mia1", "rena"]; //注意，这里的名字是存放你模型文件的主目录的名字，目录中的moc3.json文件的名字一定要与目录同名
+      //可选参数
+      let waifuTipsUrl = "./live2d/assets/waifu-tips.json";
+
+      initModel(modulesPath, modelNames, waifuTipsUrl);
+    </script>
+  </body>
+</html>
