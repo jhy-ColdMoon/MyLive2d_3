@@ -3,13 +3,19 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Live2D 看板娘 v1.2 / Demo</title>
-    <link rel="stylesheet" type="text/css" href="./live2d/assets/waifu.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/jhy-ColdMoon/MyLive2d_3/live2d/assets/waifu.css"
+    />
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
     <h2>从开发模式分离出来的，能够直接运行，显示看板娘</h2>
     <h2>可切换看板娘，仅限模型中存在的</h2>
-    <h2>该HTML需要以服务器方式运行，因为路径为相对路径指定的文件</h2>
+    <h2>
+      该HTML采用cdn方式加载，所以运行可以用本地文件或服务器方式运行，但需要Github加速
+    </h2>
     <h2>但只有模型，模型旁边的小工具功能有些没有实现</h2>
     <div class="waifu">
       <div class="waifu-tips"></div>
@@ -25,18 +31,20 @@
       </div>
     </div>
     <!-- Live2DCubismCore script -->
-    <script src="./Core/live2dcubismcore.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jhy-ColdMoon/MyLive2d_3/Core/live2dcubismcore.js"></script>
     <!-- Build script -->
-    <script src="./dist/meidou_live2d.js"></script>
-    <script src="./live2d/assets/waifu-tips.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jhy-ColdMoon/MyLive2d_3/dist/meidou_live2d.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jhy-ColdMoon/MyLive2d_3/live2d/assets/waifu-tips.js"></script>
     <script type="text/javascript">
       //必选参数
       //let remoteurl = "http://127.0.0.1:5501/"
-      let modulesPath = "./live2d/models/";
+      let modulesPath =
+        "https://cdn.jsdelivr.net/gh/jhy-ColdMoon/MyLive2d_3/live2d/models/";
       //modulesPath =remoteurl
       let modelNames = ["Hiyori", "mia1", "rena"]; //注意，这里的名字是存放你模型文件的主目录的名字，目录中的moc3.json文件的名字一定要与目录同名
       //可选参数
-      let waifuTipsUrl = "./live2d/assets/waifu-tips.json";
+      let waifuTipsUrl =
+        "https://cdn.jsdelivr.net/gh/jhy-ColdMoon/MyLive2d_3/live2d/assets/waifu-tips.json";
 
       initModel(modulesPath, modelNames, waifuTipsUrl);
     </script>
