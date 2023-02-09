@@ -1,7 +1,7 @@
 .waifu {
     position: fixed;
     bottom: 0;
-    /* right:0; 看板娘位于屏幕右边 */
+    /* right:0; 看板娘位于屏幕右边，left:0;看板娘位于左边 */
     right: 0;
     z-index: 1;
     font-size: 0;
